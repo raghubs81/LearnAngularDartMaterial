@@ -1,0 +1,16 @@
+/* Copyright (c) 2017, Raghu. All rights reserved. Use of this source code
+   is governed by a BSD-style license that can be found in the LICENSE file. */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Material+Icons);
+
+:host { border: 1px solid; display: block; height: 100%; overflow: hidden; position: relative; width: 100%; }
+*     { font-family: Roboto, Helvetica, Arial, sans-serif; }
+
+/* Flex Layout Core */
+div.wrap-layout { height:100vh; overflow:scroll; }
+div.v-layout    { display:flex; flex-direction:column; width: 100%; }
+div.h-layout    { display:flex; flex-direction:row;    height:100%; }
+
+
+

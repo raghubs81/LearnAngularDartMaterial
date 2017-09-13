@@ -1,0 +1,89 @@
+<!--
+  Copyright (c) 2017, the Dart project authors.  Please see the AUTHORS file
+  for details. All rights reserved. Use of this source code is governed by a
+  BSD-style license that can be found in the LICENSE file.
+-->
+
+<material-drawer temporary #drawer="drawer"
+                 [attr.end]="end ? '' : null"
+                 [attr.overlay]="overlay ? '' : null"
+                 id="my-drawer">
+
+   <material-list *deferredContent>
+
+      <div group class="mat-drawer-spacer"></div>
+      <div group>
+         <material-list-item>
+            <material-icon icon="star"></material-icon>
+            StarA1
+         </material-list-item>
+
+         <material-list-item>
+            <material-icon icon="star"></material-icon>
+            StarA2
+         </material-list-item>
+      </div>
+      <div group>
+         <material-list-item>
+            <material-icon icon="star"></material-icon>
+            StarB
+         </material-list-item>
+      </div>
+   </material-list>
+</material-drawer>
+
+<material-content>
+   <header class="material-header shadow">
+      <div class="material-header-row">
+
+         <material-button class="material-drawer-button" icon (trigger)="drawer.toggle()">
+            <material-icon icon="menu"></material-icon>
+         </material-button>
+
+         <span class="material-header-title">AngularDart Material</span>
+
+         <div class="material-spacer"></div>
+
+         <nav class="material-navigation"><a href="#AppLayout">Link 1</a></nav>
+         <nav class="material-navigation"><a href="#AppLayout">Link 2</a></nav>
+         <nav class="material-navigation"><a href="#AppLayout">Link 3</a></nav>
+
+      </div>
+   </header>
+
+   <div class="wrap-layout v-layout">
+
+      <div class="sectionTitle show">
+         <div class="title">{{title}}</div>
+      </div>
+
+      <div class="h-layout">
+
+         <div class="sectionNav show">
+
+            <material-list>
+               <div group>
+                  <material-list-item class="navListItem" [routerLink]="['Learn01LoopBack']">Loop Back</material-list-item>
+                  <material-list-item class="navListItem" [routerLink]="['Learn02ReferenceVariable']">Template Reference Variable</material-list-item>
+               </div>
+            </material-list>
+         </div>
+
+         <div class="sectionContent show">
+            <router-outlet></router-outlet>
+         </div>
+      </div>
+
+   </div>
+
+   <h3>Control the layout</h3>
+   <div class="controls">
+
+      <material-toggle [(checked)]="end" label="end">
+      </material-toggle>
+
+      <material-toggle [(checked)]="overlay" label="overlay">
+      </material-toggle>
+   </div>
+
+</material-content>

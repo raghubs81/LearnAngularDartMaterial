@@ -1,0 +1,22 @@
+name: learn_md
+description: Learn Material Design Angular Dart
+environment:
+  sdk: '>=1.24.0 <2.0.0-dev.infinity'
+dependencies:
+  angular: ^4.0.0
+  angular_components: ^0.6.0
+  browser: ^0.10.0
+  dart_to_js_script_rewriter: ^1.0.1
+  angular_router: ^1.0.2
+dev_dependencies:
+  webdriver: ^1.2.1
+transformers:
+- angular:
+    entry_points: web/main.dart
+    $exclude:
+    - test/**.template.dart
+    - test/core/reflection/reflector_test.dart
+    - test/source_gen/template_compiler/test_files/**
+- $dart2js:
+    commandLineOptions: [--trust-type-annotations, --trust-primitives, --show-package-warnings, --dump-info]
+- dart_to_js_script_rewriter
