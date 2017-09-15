@@ -1,5 +1,12 @@
 a:link, a:visited, a:active, a:hover { color:rgb(60,80,180); text-decoration: none; }
 
+/* Heading */
+h1 { font-family: Tahoma; font-size:22px; font-weight:normal; padding-left: 3px; }
+h2 { font-family: Tahoma; font-size:20px; font-weight:normal; padding-left: 3px; }
+h3 { font-family: Tahoma; font-size:17px; padding-left: 3px; }
+h3 { font-family: Tahoma; font-size:15px; padding-left: 3px; }
+
+
 /* Layout divs */
 div.sectionTitle   { display: flex; align-items: center; height:50px; padding: 5px; }
 div.sectionNav     { width:300px;  }
